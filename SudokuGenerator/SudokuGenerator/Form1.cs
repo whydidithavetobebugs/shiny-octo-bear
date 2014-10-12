@@ -23,6 +23,14 @@ namespace SudokuGenerator
 
             var rows = p1.CollectLabels(tableLayoutPanel1.Controls);
             p1.ProcessCollections(rows, tableLayoutPanel1.Controls);
+            CloseButton.Visible = true;
         }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }

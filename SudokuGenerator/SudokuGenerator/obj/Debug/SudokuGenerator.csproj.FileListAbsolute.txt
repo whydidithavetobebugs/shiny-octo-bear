@@ -7,3 +7,11 @@ d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerat
 d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.exe
 d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.pdb
 d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.csprojResolveAssemblyReference.cache
+D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\bin\Debug\SudokuGenerator.exe.config
+D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.exe
+D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.pdb
+D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\bin\Debug\SudokuGenerator.exe
+D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\bin\Debug\SudokuGenerator.pdb
+D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.Form1.resources
+D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.Properties.Resources.resources
+D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.csproj.GenerateResource.Cache
