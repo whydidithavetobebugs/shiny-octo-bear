@@ -108,7 +108,7 @@ namespace SudokuGenerator
 
         public void ProcessCollections(Dictionary<int, List<Control>> rows, TableLayoutControlCollection controls)
         {
-            var labelNameAndValue = new Dictionary<int, string>();// Create a dictionary with a label's tag as the 
+            var labelNameAndValue = new Dictionary<int, string>();// Create a dictionary with a label's tag as the Key and the label's text (i.e. the shown value) as the Value
 
             foreach (Control control in controls)
             {
