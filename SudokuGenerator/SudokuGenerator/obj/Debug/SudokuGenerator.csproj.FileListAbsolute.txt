@@ -1,0 +1,9 @@
+d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\bin\Debug\SudokuGenerator.exe.config
+d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\bin\Debug\SudokuGenerator.exe
+d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\bin\Debug\SudokuGenerator.pdb
+d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.Form1.resources
+d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.Properties.Resources.resources
+d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.csproj.GenerateResource.Cache
+d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.exe
+d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.pdb
+d:\users\joe\documents\visual studio 2013\Projects\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.csprojResolveAssemblyReference.cache
