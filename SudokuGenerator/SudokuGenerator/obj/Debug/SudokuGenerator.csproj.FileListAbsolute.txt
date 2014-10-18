@@ -15,3 +15,4 @@ D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\bi
 D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.Form1.resources
 D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.Properties.Resources.resources
 D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.csproj.GenerateResource.Cache
+D:\Users\Joe\Documents\GitHub\shiny-octo-bear\SudokuGenerator\SudokuGenerator\obj\Debug\SudokuGenerator.csprojResolveAssemblyReference.cache

@@ -21,8 +21,8 @@ namespace SudokuGenerator
         {
             var p1 = new Program();
 
-            var rows = p1.CollectLabels(tableLayoutPanel1.Controls);
-            p1.ProcessCollections(rows, tableLayoutPanel1.Controls);
+            var gridValues = p1.CreateListOfAllPossibleGridValues();
+            p1.ChooseValueForLabel(tableLayoutPanel1.Controls, gridValues);
 
             CloseButton.Visible = true;
         }

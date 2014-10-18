@@ -19,117 +19,38 @@ namespace SudokuGenerator
             Application.Run(new Form1());
         }
 
-        Random rnd = new Random();
+        static Random rnd = new Random();
 
-        private string CalculateNumbers(Control label)
+        public List<int> CreateListOfAllPossibleGridValues()
         {
-            var value = rnd.Next(1, 10);
+            var gridValues = new List<int>();
 
-            label.Text = value.ToString();
-
-            return label.Text;
-        }
-
-        public Dictionary<int, List<Control>> CollectLabels(TableLayoutControlCollection controls)
-        {
-
-            var rows = new Dictionary<int, List<Control>>();// Create a dictionary with the row number as a Key and a list of Control objects in that row as the Value
-            // At this point the Control objects do not have a value
-
-            var rowOne = new List<Control>();
-            var rowTwo = new List<Control>();
-            var rowThree = new List<Control>();
-            var rowFour = new List<Control>();
-            var rowFive = new List<Control>();
-            var rowSix = new List<Control>();
-            var rowSeven = new List<Control>();
-            var rowEight = new List<Control>();
-            var rowNine = new List<Control>();
-
-            rows.Add(1, rowOne);
-            rows.Add(2, rowTwo);
-            rows.Add(3, rowThree);
-            rows.Add(4, rowFour);
-            rows.Add(5, rowFive);
-            rows.Add(6, rowSix);
-            rows.Add(7, rowSeven);
-            rows.Add(8, rowEight);
-            rows.Add(9, rowNine);
-
-            foreach (Control control in controls)
+            var n = 0;
+            while(n++ < 9)
             {
-
-                var cell = LabelNameToNumber(control);
-
-                if (cell >= 1 && cell < 10)
+                var i = 0;
+                while(i++ < 9)
                 {
-                    rowOne.Add(control);
-                }
-                else if (cell >= 10 && cell < 19)
-                {
-                    rowTwo.Add(control);
-                }
-                else if (cell >= 19 && cell < 28)
-                {
-                    rowThree.Add(control);
-                }
-                else if (cell >= 28 && cell < 37)
-                {
-                    rowFour.Add(control);
-                }
-                else if (cell >= 37 && cell < 46)
-                {
-                    rowFive.Add(control);
-                }
-                else if (cell >= 46 && cell < 55)
-                {
-                    rowSix.Add(control);
-                }
-                else if (cell >= 55 && cell < 64)
-                {
-                    rowSeven.Add(control);
-                }
-                else if (cell >= 64 && cell < 73)
-                {
-                    rowEight.Add(control);
-                }
-                else if (cell >= 73 && cell < 82)
-                {
-                    rowNine.Add(control);
-                }
-                else
-                {
-
+                    gridValues.Add(i);
                 }
             }
 
-            return rows;
+            return gridValues;
         }
 
-        public void ProcessCollections(Dictionary<int, List<Control>> rows, TableLayoutControlCollection controls)
+        public Dictionary<string, int> ChooseValueForLabel(TableLayoutControlCollection controls, List<int> gridValues)
         {
-            var labelNameAndValue = new Dictionary<int, string>();// Create a dictionary with a label's tag as the Key and the label's text (i.e. the shown value) as the Value
+            var labelNameAndChosenValue = new Dictionary<string, int>();
 
-            foreach (Control control in controls)
+            foreach(Control control in controls)
             {
-                var labelValue = CalculateNumbers(control);// This is a string, since the text of a label is always a string
-                var labelName = LabelNameToNumber(control);// This is an integer, denoting the label's name (i.e. 1 to 81)
+                var r = rnd.Next(gridValues.Count);
 
-                labelNameAndValue.Add(labelName, labelValue);
+                labelNameAndChosenValue.Add(control.Name, gridValues[r]);
+                control.Text = gridValues[r].ToString();
             }
 
-            var temp = 1;
-        }
-
-        private int LabelNameToNumber(Control control)
-        {
-            var name = control.Name;
-
-            var nameTag = name.Substring(5);
-
-            var LabelNumber = Convert.ToInt32(nameTag);
-
-            return LabelNumber;
+            return labelNameAndChosenValue;
         }
     }
 }
