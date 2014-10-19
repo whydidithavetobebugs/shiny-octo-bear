@@ -23,9 +23,13 @@ namespace SudokuGenerator
 
             var rowsAndLabels = p1.CreateLabelCollections(tableLayoutPanel1.Controls);
 
+            var valuesInAllRows = new List<List<int>>();
+
             foreach (var row in rowsAndLabels)
             {
-                p1.ChooseAndSetValueForLabel(row);
+                var rowValues = p1.ChooseAndSetValueForLabel(row, valuesInAllRows);
+
+                valuesInAllRows.Add(rowValues);
             }
 
             CloseButton.Visible = true;

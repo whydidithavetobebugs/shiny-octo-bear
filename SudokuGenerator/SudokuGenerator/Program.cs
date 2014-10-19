@@ -107,6 +107,7 @@ namespace SudokuGenerator
 
         private int labelNameToNumber(Control control)
         {
+            // Take a label's name (e.g. "label45"), isolate the number, and convert to an integer (e.g. 45)
             var nameTag = control.Name.Substring(5);
 
             var number = Convert.ToInt32(nameTag);
@@ -114,21 +115,26 @@ namespace SudokuGenerator
             return number;
         }
 
-        public void ChooseAndSetValueForLabel(KeyValuePair<string, List<Control>> row)
+        public List<int> ChooseAndSetValueForLabel(KeyValuePair<string, List<Control>> row, List<List<int>> valuesInAllRows)
         {
+            var controls = row.Value;// Get all Control objects in the given row
 
-            var controls = row.Value;
+            var gridValues = CreateListOfOneToNine();// Create a list of integers from 1 to 9
 
-            var gridValues = CreateListOfOneToNine();
+            var rowValues = new List<int>();
 
-            foreach (var control in controls)
+            for (var i = 0; i < controls.Count; i++)
             {
                 var r = rnd.Next(gridValues.Count);
 
-                control.Text = gridValues[r].ToString();
+                controls[i].Text = gridValues[r].ToString();
+
+                rowValues.Add(gridValues[r]);
 
                 gridValues.RemoveAt(r);
             }
+
+            return rowValues;
         }
     }
 }
