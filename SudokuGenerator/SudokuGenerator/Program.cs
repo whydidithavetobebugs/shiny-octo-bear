@@ -127,7 +127,14 @@ namespace SudokuGenerator
             {
                 var r = rnd.Next(gridValues.Count);
 
-                controls[i].Text = gridValues[r].ToString();
+                while (!CheckColumns(valuesInAllRows, gridValues[r], i))
+                {
+                    // Within each list of integers, compare gridValue[r] against the element in the list at index i
+                    // If this returns false, regenerate a random r and check again
+                    r = rnd.Next(gridValues.Count);
+                }
+
+                controls[i].Text = gridValues[r].ToString();// Set the label's text to be the given value
 
                 rowValues.Add(gridValues[r]);
 
@@ -135,6 +142,20 @@ namespace SudokuGenerator
             }
 
             return rowValues;
+        }
+
+        private bool CheckColumns(List<List<int>> valuesInAllRows, int value, int i)
+        {
+            // Check each list at the same index for the given value; if value doesn't appear, return true, otherwise, return false
+            foreach (var row in valuesInAllRows)
+            {
+                if (row[i] == value)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
